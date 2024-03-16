@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "watch": ["src"],
+  "exec": "rm -rf ./dist && tsc && tsc-alias -p ./tsconfig.json && node dist/app.js",
+  "ext": "ts, tsx, json"
+}
