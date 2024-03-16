@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "@monorepo/ui",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -10,6 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@monorepo/types": "workspace:*"
+  },
   "devDependencies": {
     "html-webpack-plugin": "5.6.0",
     "ts-loader": "9.5.1",
