@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import pino from "pino-http";
 import healthRouter from "@/api/health/router";
+import projectsRouter from "@/api/projects/router";
 
 const HOST = process.env.HOST || "localhost";
 const PORT = process.env.PORT || 3001;
@@ -18,6 +19,7 @@ app.use(pino());
 app.use(express.json());
 
 app.get("/health", healthRouter);
+app.use("/projects", projectsRouter);
 
 const server = app.listen(PORT, HOST, () => {
   logger.info(`Server is running at ${HOST}:${PORT}`);
