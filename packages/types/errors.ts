@@ -1,17 +1,15 @@
-export class ValidationError extends Error {
-  type = "ValidationError";
-  status = 400;
-
-  constructor(message?: string) {
-    super(message);
-  }
+export interface Error {
+  type: string;
+  status: number;
+  message: string | undefined;
 }
 
-export class FetchRailwayApiError extends Error {
-  type = "FetchRailwayApiError";
-  status = 500;
+export interface ValidationError extends Error {
+  type: "ValidationError";
+  status: 400;
+}
 
-  constructor(resouce: string, message?: string) {
-    super(`Failed to fetch ${resouce}: ${message}`);
-  }
+export interface FetchRailwayApiError extends Error {
+  type: "FetchRailwayApiError";
+  status: 500;
 }
