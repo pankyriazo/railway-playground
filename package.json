@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "pnpm --parallel run test",
     "dev": "pnpm --parallel run dev",
     "build": "pnpm --parallel run  build"
   },

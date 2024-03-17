@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "test": "jest --config config/jest/config.js",
     "dev": "webpack serve --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js"
   },
@@ -14,7 +15,12 @@
     "@monorepo/types": "workspace:*"
   },
   "devDependencies": {
+    "@types/jest": "29.5.12",
     "html-webpack-plugin": "5.6.0",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "jsdom": "24.0.0",
+    "ts-jest": "29.1.2",
     "ts-loader": "9.5.1",
     "typescript": "5.4.2",
     "webpack": "5.90.3",
