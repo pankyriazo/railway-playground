@@ -1,11 +1,8 @@
 import { Request, Response } from "express";
 import Joi from "joi";
-import {
-  FetchRailwayApiError,
-  Projects,
-  ValidationError,
-} from "@monorepo/types";
+import { Projects } from "@monorepo/types";
 import query from "./query";
+import { FetchRailwayApiError, ValidationError } from "@/types/errors";
 
 const apiUrl = process.env.RAILWAY_API_URL;
 
@@ -16,10 +13,10 @@ const handler = async (req: Request, res: Response) => {
   const { error, value } = schema.validate(req.query);
   if (error) {
     const { status, ...errorBody } = new ValidationError(
-      error.details[0]?.message
+      error.details[0]?.message ?? "Invalid request"
     );
 
-    return res.status(400).json(errorBody);
+    return res.status(status).json(errorBody);
   }
 
   const { token } = value;
@@ -40,6 +37,7 @@ const handler = async (req: Request, res: Response) => {
         "projects",
         error.message
       );
+
       return res.status(status).json(errorBody);
     });
 
