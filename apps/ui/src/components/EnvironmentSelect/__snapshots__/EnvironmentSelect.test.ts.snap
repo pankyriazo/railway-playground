@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EnvironmentSelect should render select element 1`] = `
+<select
+  data-testid="environment-select"
+  id="environments"
+>
+  <option
+    data-testid="environment-select__option"
+    value="1beb4373-6b1f-43cb-8150-0e7214acea82"
+  >
+    production
+  </option>
+  <option
+    data-testid="environment-select__option"
+    value="632da482-c5b1-4570-87af-9ea225c335cb"
+  >
+    staging
+  </option>
+</select>
+`;
