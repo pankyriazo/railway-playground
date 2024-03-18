@@ -1,22 +1,13 @@
-import { mockComponent } from "@/test-helpers";
+import { mockComponent, render } from "@/test-helpers";
 import App from "./App";
 
 jest.mock("@/components/TokenInput", () => mockComponent("TokenInput"));
 jest.mock("@/components/Instructions", () => mockComponent("Instructions"));
 jest.mock("@/components/Projects", () => mockComponent("Projects"));
 
-const render = () => {
-  const app = new App();
-  document.body.appendChild(app.element);
-};
-
 describe("App", () => {
   beforeEach(() => {
-    render();
-  });
-
-  afterEach(() => {
-    document.body.innerHTML = "";
+    render(App);
   });
 
   it("should render", () => {

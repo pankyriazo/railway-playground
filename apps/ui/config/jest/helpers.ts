@@ -11,3 +11,10 @@ export const mockComponent = (name: string) => {
     }),
   };
 };
+
+type Class = { new (): { element: Node } };
+export const render = <T extends Class>(Component: T) => {
+  const app = new Component();
+
+  document.body.appendChild(app.element);
+};
