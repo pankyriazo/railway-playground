@@ -18,4 +18,4 @@ WORKDIR /app
 
 COPY --from=build /app/apps/server/dist .
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]
