@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render 1`] = `
+<body>
+  <header
+    class="header"
+  >
+    <div
+      class="container"
+    >
+      
+      
+      <h1
+        class="title"
+        data-testid="title"
+      >
+        
+        
+        <a
+          data-testid="title-link"
+          href="/"
+          title="Railway Playground Home"
+        >
+          
+          Railway Playground
+        
+        </a>
+        
+      
+      </h1>
+      
+    
+    </div>
+  </header>
+  <main
+    class="container"
+  >
+    <section>
+      <div
+        data-component="TokenInput"
+      />
+      <div
+        data-component="Instructions"
+      />
+    </section>
+    <section>
+      <div
+        data-component="Projects"
+      />
+    </section>
+  </main>
+</body>
+`;
