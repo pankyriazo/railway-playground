@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Instructions when the token is empty should render the correct text 1`] = `
+<div
+  class="container"
+  data-testid="instructions"
+>
+  <p>
+    To get started, please enter your Railway access token. ☝️
+  </p>
+</div>
+`;
+
+exports[`Instructions when the token is not empty should not render 1`] = `
+<div
+  class=""
+  data-testid="instructions"
+/>
+`;

@@ -1,0 +1,14 @@
+.container {
+  composes: container from global;
+
+  background-color: var(--color-bg--inverse);
+  border-radius: var(--border-radius);
+  color: var(--color-text--inverse);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height);
+  margin: var(--spacing-xxl) auto;
+  max-width: 15rem;
+  position: relative;
+  padding: var(--spacing-md);
+  text-align: center;
+}
