@@ -7,10 +7,6 @@ describe("TokenInput", () => {
     render(TokenInput);
   });
 
-  afterEach(() => {
-    store.dispatch({ type: "RESET" });
-  });
-
   it("should render", () => {
     expect(document.body).toMatchSnapshot();
   });
