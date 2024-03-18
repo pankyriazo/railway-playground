@@ -3,20 +3,13 @@ import { mockGetProjectList } from "@/api/__mocks__/getProjectList";
 import EnvironmentSelect from "./EnvironmentSelect";
 
 describe("EnvironmentSelect", () => {
-  const onEnvironmentChange = jest.fn();
-
   beforeEach(() => {
     render(EnvironmentSelect, {
       options: mockGetProjectList.data.me.projects.edges[0].node.environments,
       selected:
         mockGetProjectList.data.me.projects.edges[0].node.environments.edges[0]
           .node,
-      onChange: onEnvironmentChange,
     });
-  });
-
-  afterEach(() => {
-    onEnvironmentChange.mockClear();
   });
 
   it("should render select element", () => {
