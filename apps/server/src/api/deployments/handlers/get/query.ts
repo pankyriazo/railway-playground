@@ -9,4 +9,4 @@ export default ({
   serviceId: _serviceId,
   deploymentCount,
 }: GetDeploymentsQueryParams) =>
-  `query deployments { deployments( first: ${deploymentCount}, input: { projectId: "${_projectId}" serviceId: "${_serviceId}" } ) { edges { node { id staticUrl status url updatedAt canRedeploy canRollback environmentId } } } }`;
+  `query deployments { deployments( first: ${deploymentCount}, input: { projectId: "${_projectId}" serviceId: "${_serviceId}" } ) { edges { node { id status updatedAt environmentId } } } }`;

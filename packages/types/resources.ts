@@ -34,14 +34,10 @@ export type Projects = WithErrors<{
 }>;
 
 export type Deployment = {
-  canRedeploy: boolean;
-  canRollback: boolean;
   environmentId: string;
   id: string;
-  staticUrl: string | null;
   status: string;
   updatedAt: string;
-  url: string | string;
 };
 
 export type Deployments = WithErrors<{
