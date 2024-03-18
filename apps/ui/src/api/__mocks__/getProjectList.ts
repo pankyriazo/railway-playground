@@ -1,6 +1,6 @@
 import { GetProjectListResponse } from "@/api/types";
 
-export const mockGetProjectList: GetProjectListResponse = {
+export const mockGetProjectList = {
   data: {
     me: {
       projects: {
@@ -50,13 +50,13 @@ export const mockGetProjectList: GetProjectListResponse = {
       },
     },
   },
-};
+} as const satisfies GetProjectListResponse;
 
-export const mockGetProjectListError: GetProjectListResponse = {
+export const mockGetProjectListError = {
   data: null,
   errors: [
     {
       message: "Unauthorized",
     },
   ],
-};
+} as const satisfies GetProjectListResponse;
