@@ -1,0 +1,21 @@
+.container {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border--900);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  transition: border-color var(--transition);
+}
+.container:hover {
+  border-color: var(--color-border--500);
+}
+
+.title {
+  color: var(--color-text--900);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.services {
+  margin-top: var(--spacing-lg);
+}

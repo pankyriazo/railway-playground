@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Project should render 1`] = `
+<li
+  class="container"
+  data-testid="project"
+  id="project-a20a0d44-a6de-4804-acf1-58d436570fd7"
+>
+  <h3
+    class="title"
+    data-testid="project__title"
+  >
+    nauseating-cup
+  </h3>
+  <div
+    class="environment"
+  >
+    <div
+      data-component="EnvironmentSelect"
+    />
+  </div>
+  <div
+    class="services"
+  >
+    <div
+      data-component="Services"
+    />
+  </div>
+</li>
+`;
