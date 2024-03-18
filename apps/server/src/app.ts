@@ -9,7 +9,7 @@ import projectsRouter from "@/api/projects/router";
 import deploymentsRouter from "@/api/deployments/router";
 
 const HOST = process.env.HOST || "localhost";
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 const app: Express = express();
 const logger = pino().logger;
