@@ -1,0 +1,56 @@
+:root {
+  --font-family: "Lora", sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  --border-radius: 0.5rem;
+
+  --transition: 0.3s ease;
+
+  --color-bg: #ffffff;
+  --color-bg--900: #f2f2f2;
+  --color-bg--800: #e6e6e6;
+  --color-bg--700: #d9d9d9;
+  --color-bg--600: #cccccc;
+  --color-bg--500: #b3b3b3;
+  --color-bg--inverse: #1a1a1a;
+  --color-text: #000;
+  --color-text--inverse: #fff;
+  --color-text--900: #333;
+  --color-text--800: #666;
+  --color-text--700: #999;
+  --color-text--600: #b3b3b3;
+  --color-text--500: #ccc;
+  --color-border: #f2f2f2;
+  --color-border--900: #e6e6e6;
+  --color-border--800: #d9d9d9;
+  --color-border--700: #cccccc;
+  --color-border--600: #b3b3b3;
+  --color-border--500: #999;
+
+  --color-success: #198855;
+  --color-success--hover: #229f65;
+  --color-error: #dc3546;
+  --color-error--hover: #e44d5b;
+  --color-warning: #ffc107;
+  --color-warning--hover: #ffd42a;
+  --color-disabled: #6d757d;
+  --color-disabled--hover: #7d858d;
+}

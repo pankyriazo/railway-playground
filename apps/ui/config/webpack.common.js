@@ -6,9 +6,29 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts$/,
         use: "ts-loader",
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                mode: (resourcePath) => {
+                  if (/.*\/*.module.css/.test(resourcePath)) {
+                    return "local";
+                  }
+
+                  return "global";
+                },
+              },
+            },
+          },
+        ],
       },
     ],
   },
@@ -16,11 +36,11 @@ module.exports = {
     alias: {
       "@": path.resolve(__dirname, "..", "src"),
     },
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".ts", ".js", ".css"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Pinjero Starter!",
+      title: "Railway Playground",
     }),
   ],
 };
