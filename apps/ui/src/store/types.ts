@@ -8,9 +8,12 @@ export type State = {
 
 interface ActionBase {
   type: string;
-  payload: unknown;
+  payload?: unknown;
 }
 
+interface ResetAction extends ActionBase {
+  type: "RESET";
+}
 interface SetTokenAction extends ActionBase {
   type: "SET_TOKEN";
   payload: string;
@@ -29,6 +32,7 @@ interface RemoveDeploymentAction extends ActionBase {
 }
 
 export type Action =
+  | ResetAction
   | SetTokenAction
   | SetProjectsAction
   | AddDeploymentAction

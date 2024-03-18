@@ -1,7 +1,10 @@
 import { Action, State } from "./types";
+import { initialState } from "./store";
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
+    case "RESET":
+      return initialState;
     case "SET_TOKEN":
       return { ...state, token: action.payload };
     case "SET_PROJECTS":

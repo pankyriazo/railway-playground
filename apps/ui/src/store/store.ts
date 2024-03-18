@@ -1,16 +1,11 @@
 import reducer from "./reducer";
 import { Action, Listener, Reducer, State } from "./types";
 
-const initialState: State = {
+export const initialState: State = {
   token: "",
   projects: {
-    data: {
-      me: {
-        projects: {
-          edges: [],
-        },
-      },
-    },
+    data: null,
+    errors: [],
   },
   deployments: {},
 };
