@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
@@ -23,4 +24,9 @@ module.exports = merge(common, {
       },
     },
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      __IS_PRODUCTION__: JSON.stringify(true),
+    }),
+  ],
 });
