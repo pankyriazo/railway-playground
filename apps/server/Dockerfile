@@ -4,9 +4,7 @@ WORKDIR /app
 
 RUN npm install -g pnpm
 
-COPY pnpm-lock.yaml ./
-
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 
@@ -18,8 +16,6 @@ FROM node:20 AS release
 
 WORKDIR /app
 
-COPY --from=build /app/server/dist ./dist
+COPY --from=build /app/dist .
 
-EXPOSE 8080
-
-CMD [ "node", "dist/server.js" ]
+CMD [ "node", "server.js" ]

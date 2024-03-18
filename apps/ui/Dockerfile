@@ -1,0 +1,21 @@
+FROM node:20 AS build
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install -g pnpm
+
+RUN pnpm install --frozen-lockfile
+
+RUN pnpm -F @monorepo/ui run build
+
+# ----------------------------
+
+FROM nginx:latest AS release
+
+WORKDIR /app
+
+COPY --from=build /app/src/app/ui/dist ./dist
+
+COPY ./dist /usr/share/nginx/html
