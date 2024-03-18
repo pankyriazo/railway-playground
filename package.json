@@ -6,7 +6,10 @@
   "scripts": {
     "test": "pnpm --parallel run test",
     "dev": "pnpm --parallel run dev",
-    "build": "pnpm --parallel run  build"
+    "build": "pnpm --parallel run  build",
+    "build:server": "pnpm -F @monorepo/server run build",
+    "build:ui": "pnpm -F @monorepo/ui run build",
+    "start:server": "pnpm -F @monorepo/server run start"
   },
   "keywords": [],
   "author": "Panos Kyriazopoulos <pankyriazo@gmail.com>",
