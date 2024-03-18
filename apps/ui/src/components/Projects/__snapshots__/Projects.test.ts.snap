@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects when the projects are loaded should render the projects 1`] = `
+<div
+  data-testid="projects"
+  id="projects"
+>
+  <h2
+    class="title"
+    data-testid="projects__title"
+  >
+    Projects
+  </h2>
+  <ul
+    class="projectList"
+    data-testid="projects__list"
+  >
+    <div
+      data-component="Project"
+    />
+  </ul>
+</div>
+`;
+
+exports[`Projects when the token is updated should render the loading state 1`] = `
+<div
+  data-testid="projects"
+  id="projects"
+>
+  <h2
+    class="title"
+    data-testid="projects__title"
+  >
+    Projects
+  </h2>
+  <div
+    class="skeletonContainer"
+    data-testid="projects__skeleton"
+  >
+    <div
+      class="skeleton"
+    />
+    <div
+      class="skeleton"
+    />
+    <div
+      class="skeleton"
+    />
+  </div>
+</div>
+`;
+
+exports[`Projects when there is an error fetching the projects should render the error state 1`] = `
+<div
+  data-testid="projects"
+  id="projects"
+>
+  <h2
+    class="title"
+    data-testid="projects__title"
+  >
+    Projects
+  </h2>
+  <h3
+    class="errorTitle"
+    data-testid="projects__error-title"
+  >
+    Error fetching projects
+  </h3>
+  <p
+    class="errorMessage"
+    data-testid="projects__error-message"
+  >
+    Unauthorized
+  </p>
+</div>
+`;

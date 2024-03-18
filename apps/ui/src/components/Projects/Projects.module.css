@@ -1,0 +1,38 @@
+.title {
+  color: var(--color-text--600);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.skeleton {
+  composes: skeleton from global;
+
+  border-radius: var(--border-radius);
+  height: 10rem;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-md);
+}
+
+.errorTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+.errorMessage {
+  color: var(--color-text--800);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--spacing-sm);
+}
