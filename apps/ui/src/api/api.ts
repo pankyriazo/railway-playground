@@ -1,4 +1,4 @@
-import { SERVER_URL } from "@/environment";
+import { getServerUrl } from "@/environment";
 import {
   GetDeploymentListParams,
   GetDeploymentListResponse,
@@ -6,7 +6,7 @@ import {
   GetProjectListResponse,
 } from "./types";
 
-const baseUrl = SERVER_URL;
+const baseUrl = getServerUrl();
 
 const api = {
   getProjectList: ({ token }: GetProjectListParams) => {
