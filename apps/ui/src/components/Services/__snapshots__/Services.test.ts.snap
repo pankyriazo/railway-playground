@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Services should render 1`] = `
+<ul
+  data-testid="services"
+  id="services"
+>
+  <h4
+    class="title"
+  >
+    Services
+  </h4>
+  <ul
+    class="list"
+    data-testid="services__list"
+  >
+    <li
+      id="service-0e62e7bf-2008-4452-bd32-e57cec3bb9a2"
+    />
+    <li
+      id="service-7ab42902-aae8-47b7-9976-81496dc61834"
+    />
+  </ul>
+</ul>
+`;

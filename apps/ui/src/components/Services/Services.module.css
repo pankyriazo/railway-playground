@@ -1,0 +1,23 @@
+.title {
+  color: var(--color-text--600);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+.list {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: var(--spacing-lg);
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: var(--spacing-sm);
+}
+
+@media (min-width: 48rem) {
+  .list {
+    flex-direction: row;
+  }
+}
