@@ -1,0 +1,21 @@
+.skeleton {
+  composes: skeleton from global;
+
+  border-radius: var(--border-radius);
+  height: 5rem;
+  max-width: 100%;
+  width: 10rem;
+}
+
+.title {
+  color: var(--color-text--900);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.deployments {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-xs);
+}

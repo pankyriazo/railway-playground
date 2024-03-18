@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Service when the deployments are loaded should render the deployments 1`] = `null`;
+
+exports[`Service when the token is updated should render the loading state 1`] = `
+<li
+  data-testid="service"
+  id="service-0e62e7bf-2008-4452-bd32-e57cec3bb9a2"
+>
+  <h4
+    class="title"
+    data-testid="service__title"
+  >
+    fascinated-motion
+  </h4>
+  <h5
+    data-testid="service__error-title"
+  >
+    Error fetching deployments
+  </h5>
+</li>
+`;
