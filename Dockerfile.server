@@ -2,11 +2,11 @@ FROM node:20 AS build
 
 WORKDIR /app
 
+COPY . .
+
 RUN npm install -g pnpm
 
 RUN pnpm install --frozen-lockfile
-
-COPY . .
 
 RUN pnpm -F @monorepo/server run build
 
