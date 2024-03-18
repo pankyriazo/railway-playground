@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Deployments when the deployments are empty should render empty message 1`] = `
+<p
+  class="empty"
+  data-testid="deployments__empty"
+>
+  No deployments found.
+</p>
+`;
+
+exports[`Deployments when the deployments are not empty should render deployments 1`] = `
+NodeList [
+  <div
+    data-component="Deployment"
+  />,
+]
+`;
