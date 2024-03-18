@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TokenInput should render 1`] = `
+<body>
+  <form
+    data-testid="token-input__form"
+    id="form"
+  >
+    <div
+      class="container"
+    >
+      <label
+        class="label"
+        data-testid="token-input__label"
+        for="token"
+      >
+        Access token
+      </label>
+      <input
+        autofocus=""
+        class="input"
+        data-testid="token-input__input"
+        id="token"
+        placeholder="Enter your access token"
+        required=""
+        type="password"
+      />
+      <button
+        class="btn"
+        data-testid="token-input__submit"
+        type="submit"
+      >
+        Use token
+      </button>
+    </div>
+  </form>
+</body>
+`;
