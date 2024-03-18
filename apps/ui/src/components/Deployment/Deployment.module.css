@@ -1,0 +1,40 @@
+.container {
+  background-color: var(--status-color__bg);
+  border-radius: var(--border-radius);
+  color: var(--status-color__text);
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-sm);
+  row-gap: var(--spacing-xs);
+  transition: background-color var(--transition);
+}
+.container:hover {
+  background-color: var(--status-color__bg--hover);
+}
+
+.success {
+  --status-color__bg: var(--color-success);
+  --status-color__bg--hover: var(--color-success--hover);
+  --status-color__text: var(--color-text--inverse);
+}
+
+.failed {
+  --status-color__bg: var(--color-error);
+  --status-color__bg--hover: var(--color-error--hover);
+  --status-color__text: var(--color-text--inverse);
+}
+
+.pending {
+  --status-color__bg: var(--color-warning);
+  --status-color__bg--hover: var(--color-warning--hover);
+  --status-color__text: var(--color-text);
+}
+
+.default {
+  --status-color__bg: var(--color-disabled);
+  --status-color__bg--hover: var(--color-disabled--hover);
+  --status-color__text: var(--color-text--inverse);
+}
