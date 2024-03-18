@@ -16,6 +16,6 @@ FROM nginx:latest AS release
 
 WORKDIR /app
 
-COPY --from=build /app/src/app/ui/dist ./dist
+COPY --from=build /app/apps/ui/dist ./dist
 
 COPY ./dist /usr/share/nginx/html
