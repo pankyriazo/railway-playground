@@ -12,6 +12,18 @@ describe("Deployment", () => {
     BUILDING: "pending",
   } as const;
 
+  let dateSpy: jest.SpyInstance;
+
+  beforeAll(() => {
+    dateSpy = jest
+      .spyOn(Date.prototype, "toLocaleString")
+      .mockReturnValue("1/1/2024, 10:50:14 AM");
+  });
+
+  afterAll(() => {
+    dateSpy.mockRestore();
+  });
+
   it("should render the deployment", () => {
     render(Deployment, { deployment });
 
