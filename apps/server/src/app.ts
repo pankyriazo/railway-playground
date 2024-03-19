@@ -3,27 +3,26 @@ import "dotenv/config";
 import express, { Express } from "express";
 import cors from "cors";
 import helmet from "helmet";
-import pino from "pino-http";
 import healthRouter from "@/api/health/router";
 import projectsRouter from "@/api/projects/router";
 import deploymentsRouter from "@/api/deployments/router";
+import { logger, loggerMiddleware } from "@/logger";
 
 const HOST = process.env.HOST || "0.0.0.0";
 const PORT = process.env.PORT || 3001;
 
 const app: Express = express();
-const logger = pino().logger;
 
 app.use(cors());
 app.use(helmet());
-app.use(pino());
+app.use(loggerMiddleware);
 app.use(express.json());
 
-app.get("/health", healthRouter);
+app.use("/health", healthRouter);
 app.use("/projects", projectsRouter);
 app.use("/deployments", deploymentsRouter);
 
-const server = app.listen(PORT, HOST, () => {
+export const server = app.listen(PORT, HOST, () => {
   logger.info(`Server is running at ${HOST}:${PORT}`);
 });
 
