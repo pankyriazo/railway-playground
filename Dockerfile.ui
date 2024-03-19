@@ -10,12 +10,16 @@ RUN pnpm install --frozen-lockfile
 
 RUN pnpm -F @monorepo/ui run build
 
+RUN rm -rf app/apps/server
+
 # ----------------------------
 
-FROM nginx:latest AS release
+FROM nginx:alpine3.18 AS release
 
 WORKDIR /app
 
-COPY --from=build /app/apps/ui/dist ./dist
+COPY --from=build /app .
 
-COPY ./dist /usr/share/nginx/html
+COPY apps/ui/dist /usr/share/nginx/html
+
+EXPOSE 80
