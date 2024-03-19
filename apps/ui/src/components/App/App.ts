@@ -27,7 +27,7 @@ class App extends Component<DocumentFragment> {
     headerInner.className = "container";
     headerInner.innerHTML = `
       <h1 class="title" data-testid="title">
-        <a href="/" title="Railway Playground Home" data-testid="title-link">
+        <a href="/" title="Railway Playground home" data-testid="title-link">
           Railway Playground
         </a>
       </h1>
