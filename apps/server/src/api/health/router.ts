@@ -1,9 +1,8 @@
 import { Router } from "express";
+import getHandler from "./handlers/get";
 
 const router = Router();
 
-router.get("/", (_req, res) => {
-  res.status(200).send("OK");
-});
+router.get("/", getHandler);
 
 export default router;
