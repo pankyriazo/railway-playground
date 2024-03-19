@@ -19,7 +19,7 @@ exports[`App should render 1`] = `
         <a
           data-testid="title-link"
           href="/"
-          title="Railway Playground Home"
+          title="Railway Playground home"
         >
           
           Railway Playground

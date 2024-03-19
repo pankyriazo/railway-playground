@@ -15,9 +15,11 @@ exports[`Services should render 1`] = `
     data-testid="services__list"
   >
     <li
+      data-testid="service"
       id="service-0e62e7bf-2008-4452-bd32-e57cec3bb9a2"
     />
     <li
+      data-testid="service"
       id="service-7ab42902-aae8-47b7-9976-81496dc61834"
     />
   </ul>
