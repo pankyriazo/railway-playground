@@ -20,6 +20,6 @@ WORKDIR /app
 
 COPY --from=build /app .
 
-COPY apps/ui/dist /usr/share/nginx/html
+COPY ./apps/ui/dist /usr/share/nginx/html
 
 EXPOSE 80
