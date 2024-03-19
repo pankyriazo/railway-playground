@@ -67,7 +67,7 @@ describe("GET /projects", () => {
 
     expect(fetchSpy).toHaveBeenCalledTimes(1);
     expect(fetchSpy).toHaveBeenCalledWith(
-      "https://backboard.railway.app/graphql/v2",
+      "test-railway-api-url",
       expect.any(Object)
     );
   });
