@@ -18,8 +18,6 @@ FROM nginx:alpine3.18
 
 WORKDIR /app
 
-COPY --from=build /app .
-
-COPY /app/apps/ui/dist /usr/share/nginx/html
+COPY --from=build /app/apps/ui/dist /usr/share/nginx/html
 
 EXPOSE 80
