@@ -10,12 +10,16 @@ RUN pnpm install --frozen-lockfile
 
 RUN pnpm -F @monorepo/server run build
 
+RUN rm -rf app/apps/ui
+
 # ----------------------------
 
 FROM node:20 AS release
 
 WORKDIR /app
 
-COPY --from=build /app/apps/server/dist .
+COPY --from=build /app .
 
-CMD [ "node", "app.js" ]
+EXPOSE 3001
+
+CMD [ "node", "apps/server/dist/app.js" ]
