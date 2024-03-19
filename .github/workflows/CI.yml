@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches: master
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    strategy:
+      fail-fast: true
+      matrix:
+        app: [server, ui]
+    name: "Test: ${{ matrix.app }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 8
+      - name: Install dependencies
+        run: pnpm install
+      - name: Test
+        run: |
+          pnpm -F @monorepo/${{ matrix.app }} run test
